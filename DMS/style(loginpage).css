@@ -1,0 +1,76 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+    .bg-emerald {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .btn-emerald {
+      background-color: #10ac84;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-emerald:hover {
+      background-color: #498677;
+      border-color: #a1afac;
+    }
+
+    .laptop {
+      position: relative;
+      left: 80px;
+      bottom: 70px;
+    }
+
+    .input-group-text.with-divider {
+      position: relative;
+      background-color: white;
+      border-right: none;
+    }
+
+    .input-group-text.with-divider::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 25%;
+      bottom: 25%;
+      width: 1px;
+      background-color: #ced4da;
+    }
+
+    .login-form {
+      position: relative;
+      right: 70px;
+      bottom: 40px;
+    }
+
+    .border-grey {
+      border-color: gainsboro !important;
+    }
+
+    /* Responsive Fixes */
+    @media (max-width: 991.98px) {
+      .laptop,
+      .login-form {
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        position: static !important;
+      }
+
+      .login-form {
+        padding: 1rem !important;
+      }
+
+      .pe-5 {
+        padding-right: 0 !important;
+      }
+
+      .h-75 {
+        height: auto !important;
+      }
+    }

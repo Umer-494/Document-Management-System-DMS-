@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS FILE/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboards.css">
+    <title>Document</title>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid px-0">
+        <div class="row gx-0">
+            <div class="col-12">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm bg-body-tertiary px-3">
+                    <div class="container-fluid">
+
+                        <!-- Toggler for small screens -->
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <!-- Offcanvas Toggle Button (Left Side) -->
+                            <button class="btn btn-light rounded-circle d-lg-none m-2 shadow-sm" type="button"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar"
+                                aria-controls="offcanvasSidebar"
+                                style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+
+                            <!-- Spacer to push navbar toggler to the right -->
+                            <div class="flex-grow-1"></div>
+
+                            <!-- Navbar Toggle Button (Right Side) -->
+                            <button class="navbar-toggler d-lg-none m-2" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#topNav" aria-controls="topNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+
+
+
+
+                        <!-- Navbar content -->
+                        <div class="collapse navbar-collapse" id="topNav">
+                            <div class="ms-auto d-flex align-items-center gap-3 mt-2 mt-lg-0">
+
+                                <!-- Search Box with Icon -->
+                                <div class="input-group rounded flex-grow-1" style="max-width: 220px;">
+                                    <span class="input-group-text bg-white border-end-0"
+                                        style="border-top-left-radius: 50px; border-bottom-left-radius: 50px;">
+                                        <i class="fas fa-search text-muted"></i>
+                                    </span>
+
+                                    <input type="search" class="form-control border-start-0" placeholder="Search"
+                                        style="border-top-right-radius: 50px; border-bottom-right-radius: 50px;" />
+                                </div>
+
+                                <!-- Bell Icon -->
+                                <i class="fas fa-bell fs-5 text-secondary" style="cursor: pointer;"></i>
+
+                                <!-- Half Moon Icon -->
+                                <i class="fas fa-moon fs-5 text-secondary" style="cursor: pointer;"></i>
+
+                                <!-- Info Icon -->
+                                <i class="fas fa-info-circle fs-5 text-secondary" style="cursor: pointer;"></i>
+
+                                <!-- Profile Image -->
+                                <img src="nav-profile.svg" alt="Profile" class="rounded-circle" width="35" height="35"
+                                    style="object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-0">
+        <div class="row gx-0">
+            <!-- Sidebar -->
+            <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="offcanvasSidebar"
+                aria-labelledby="offcanvasSidebarLabel" style="background-color: #10AC84;">
+
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <!-- FLEX CONTAINER to push footer down -->
+                <div class="offcanvas-body d-flex flex-column justify-content-between p-0">
+
+                    <!-- Scrollable Navigation Links -->
+                    <div class="p-3 overflow-auto">
+                        <div class="mb-4">
+                            <img src="login-logo.png" class="img-fluid w-75">
+                        </div>
+
+                        <a href="dashboard.html" class="d-block py-2 text-white d-flex align-items-center gap-2"
+                            style="font-size: 15px; text-decoration: none;">
+                            <img src="dashboard.png" style="width: 20px;">Dashboard
+                        </a>
+                        <a href="scan-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="scan.png" style="width: 20px;">Scan Documents
+                        </a>
+                        <a href="ocr-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="ocr.png" style="width: 20px;">OCR Documents
+                        </a>
+                        <a href="retrieve-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="rertrieve.png" style="width: 20px;">Retrieve Documents
+                        </a>
+                        <a href="all-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="alldoc.png" style="width: 20px;">All Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="archieve.png" style="width: 20px;">Archive Documents
+                        </a>
+                        <a href="user-management.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="user.png" style="width: 20px;">User Management
+                        </a>
+                        <a href="audit-documents.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="audit.png" style="width: 20px;">Audit Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="setting.png" style="width: 20px;">Settings
+                        </a>
+                    </div>
+
+                    <!-- Sticky Footer -->
+                    <div class="text-white text-center w-100 py-2 px-1"
+                        style="font-size: 12px; opacity: 0.7; background-color: #46a877;">
+                        Powered by Solochoicez Pvt. Ltd.
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Regular Sidebar (visible only on desktop) -->
+            <div class="col-2 d-none d-md-block sidebar text-white p-0"
+                style="background-color: #10AC84; height: 100vh; overflow-y: auto;">
+
+                <div class="d-flex flex-column justify-content-between h-100">
+
+                    <!-- Sidebar Top -->
+                    <div class="p-3">
+                        <div class="mb-4">
+                            <img src="login-logo.png" class="img-fluid w-75">
+                        </div>
+
+                        <a href="dashboard.html" class="d-block py-2 text-white d-flex align-items-center gap-2"
+                            style="font-size: 15px;">
+                            <img src="dashboard.png" style="width: 20px;">Dashboard
+                        </a>
+                        <a href="scan-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="scan.png" style="width: 20px;">Scan Documents
+                        </a>
+                        <a href="ocr-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="ocr.png" style="width: 20px;">OCR Documents
+                        </a>
+                        <a href="retrieve-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="rertrieve.png" style="width: 20px;">Retrieve Documents
+                        </a>
+                        <a href="all-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="alldoc.png" style="width: 20px;">All Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="archieve.png" style="width: 20px;">Archive Documents
+                        </a>
+                        <a href="user-management.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="user.png" style="width: 20px;">User Management
+                        </a>
+                        <a href="audit-documents.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="audit.png" style="width: 20px;">Audit Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="setting.png" style="width: 20px;">Settings
+                        </a>
+                    </div>
+
+                    <!-- Sidebar Bottom Footer -->
+                    <div class=" text-white text-center w-100"
+                        style="font-size: 12px; padding: 10px; background-color: #46a877;">
+                        Powered by Solochoicez Pvt. Ltd.
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Main Content -->
+
+            <main class="col-md-10 px-4 pt-5 mt-3">
+                <div class="container-fluid">
+                    <!-- Header -->
+                    <div
+                        class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-2">
+                        <div class="mb-2 mb-md-0">
+                            <h4 class="fw-bold mb-0">All Document</h4>
+                            <p class="mb-0" style="font-size: 14px; font-weight: 500; color: rgb(141, 138, 138);">List
+                            </p>
+                        </div>
+
+                        <a href="add-upload-document.html">
+                            <button class="btn  px-4 py-2"
+                                style="border-radius: 10px; white-space: nowrap; max-width: 100%; background-color: #10AC84; color: white;">
+                                Add New Document
+                            </button>
+                        </a>
+                    </div>
+
+
+                    <!-- Underline -->
+                    <hr style="border: none; border-top: 1px solid #837e7e; margin: 0 2px 20px 2px;">
+
+
+                    <!-- Filters -->
+                    <div class="d-flex justify-content-end mb-3">
+                        <div class="row g-2 w-auto">
+                            <!-- Search Box with Icon -->
+                            <div class="col-auto">
+                                <div class="input-group" style="border-radius: 8px;">
+                                    <span class="input-group-text bg-white border-end-0"
+                                        style="border-radius: 8px 0 0 8px;">
+                                        <i class="fas fa-search text-muted"></i>
+                                    </span>
+                                    <input type="text" class="form-control border-start-0" placeholder="Search by name"
+                                        style="border-radius: 0 8px 8px 0;">
+                                </div>
+                            </div>
+
+                            <!-- Status Dropdown -->
+                            <div class="col-auto">
+                                <select class="form-select" style="border-radius: 8px; color: #9b9ea0;">
+                                    <option selected>Select Status</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Approved">Approved</option>
+                                </select>
+                            </div>
+
+                            <!-- Date Input -->
+                            <div class="col-auto">
+                                <div class="d-flex align-items-center px-3 py-2"
+                                    style="border: 1px solid rgb(233, 231, 231); border-radius: 8px; cursor: pointer;">
+                                    <span style="font-size: 14px; color:  #9b9ea0;">Created Date</span>
+                                    <i class="fas fa-chevron-down ms-2" style="font-size: 12px;"></i>
+                                </div>
+                            </div>
+
+
+                            <!-- Auto Refresh Toggle -->
+                            <div class="col-auto">
+                                <div class="d-flex align-items-center px-3 py-2 border" style="border-radius: 8px;">
+                                    <span class="me-4" style="font-size: 12px; color:  #9b9ea0;">Auto Refresh</span>
+                                    <div class="form-check form-switch m-0">
+                                        <input class="form-check-input" type="checkbox" id="toggleRefresh"
+                                            role="switch">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Document Table -->
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light">
+                                <!-- Col 1 -->
+                                <tr>
+                                    <th><input type="checkbox" disabled></th>
+                                    <hr style="border: none; border-bottom: 1px solid #837e7e; margin: 0 2px 20px 2px;">
+                                    <th style="color: #9b9ea0; font-size: 13px;">Name</th>
+                                    <th style="color: #9b9ea0; font-size: 13px;">Document <br>Category</th>
+                                    <th style="color: #9b9ea0; font-size: 13px;">Storage</th>
+                                    <th style="color: #9b9ea0; font-size: 13px;">Created By</th>
+                                    <th style="color: #9b9ea0; font-size: 13px;">Created Date</th>
+                                    <th style="color: #9b9ea0; font-size: 13px;">Status</th>
+                                    <th style="color: #9b9ea0; font-size: 13px;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Col 2 -->
+                                <tr>
+                                    <td style="font-size:13px;"><input type="checkbox" disabled></td>
+                                    <td style="font-size:13px;">System Maturity integration.pdf</td>
+                                    <td style="font-size:13px;">Proposal</td>
+                                    <td style="font-size:13px;">Local Disk (Default)</td>
+                                    <td style="font-size:13px;">Obaid Khan</td>
+                                    <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    <td><span class="badge"
+                                            style="background-color: #ffe6ea; color:#ff3a57">Pending</span></td>
+                                    <td>
+                                        <!-- VIEW BUTTON & FORM -->
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"
+                                            data-bs-toggle="modal" data-bs-target="#viewDocumentModal">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <!-- View Document Modal -->
+                                        <div class="modal fade" id="viewDocumentModal" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-fullscreen m-0">
+                                                <div class="modal-content border-0 rounded-0"
+                                                    style="margin-left: auto; width: 100%; max-width: 500px;">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">View Document</h4>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+
+                                                    <hr class="m-0 mb-4"
+                                                        style="border: none; border-top: 1px solid #837e7e;">
+
+                                                    <!-- Modal Body -->
+                                                    <div class="modal-body">
+                                                        <div class="row g-3">
+                                                            <div class="col-md-6">
+                                                                <label class="form-label fw-bold">File Name</label>
+                                                                <p>System Integration.pdf</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <label class="form-label fw-bold">Category</label>
+                                                                <p>Proposal</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <label class="form-label fw-bold">Storage</label>
+                                                                <p>Local Disk</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <label class="form-label fw-bold">Status</label>
+                                                                <p>Approved</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <label class="form-label fw-bold">Created By</label>
+                                                                <p>Obaid Khan</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <label class="form-label fw-bold">Created Date</label>
+                                                                <p>Jun 27, 2025</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <label class="form-label fw-bold">Created Time</label>
+                                                                <p>02:15</p>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <label class="form-label fw-bold">Description</label>
+                                                                <p>This document includes Q2 invoice details.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Edit Button & Form -->
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"
+                                            data-bs-toggle="modal" data-bs-target="#editDocumentModal">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <!-- Edit Document Modal -->
+                                        <div class="modal fade" id="editDocumentModal" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-fullscreen m-0">
+                                                <div class="modal-content border-0 rounded-0"
+                                                    style="margin-left: auto; width: 100%; max-width: 500px;">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Edit Document</h4>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+
+                                                    <hr class="m-0 mb-2"
+                                                        style="border: none; border-top: 1px solid #837e7e;">
+
+                                                    <!-- Modal Body -->
+                                                    <div class="modal-body">
+                                                        <form>
+                                                            <div class="row g-3">
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">File Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Document_001.pdf">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Category</label>
+                                                                    <select class="form-select">
+                                                                        <option selected disabled>Select</option>
+                                                                        <option>Finance</option>
+                                                                        <option>Legal</option>
+                                                                        <option>HR</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Storage</label>
+                                                                    <select class="form-select">
+                                                                        <option selected disabled>Select</option>
+                                                                        <option>Drive A</option>
+                                                                        <option>Drive B</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Status</label>
+                                                                    <select class="form-select">
+                                                                        <option selected disabled>Select</option>
+                                                                        <option>Pending</option>
+                                                                        <option>Approved</option>
+                                                                        <option>Rejected</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Created By</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Enter Name">
+                                                                </div>
+
+                                                                <div class="col-md-12">
+                                                                    <label class="form-label">Description</label>
+                                                                    <textarea class="form-control" rows="3"
+                                                                        placeholder="Enter document description"></textarea>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label fw-bold">Attached
+                                                                        Document</label>
+
+                                                                    <!-- Existing document preview/download -->
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center mb-2">
+                                                                        <span class="text-secondary"><i
+                                                                                class="fas fa-file-alt me-2"></i>Document_001.pdf</span>
+                                                                        <a href="path/to/document.pdf" target="_blank"
+                                                                            class="btn btn-sm"
+                                                                            style="color: #10AC84; border-color: #10AC84;">View</a>
+                                                                    </div>
+
+                                                                    <!-- Upload new document -->
+                                                                    <input type="file" class="form-control"
+                                                                        accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="d-flex justify-content-end mt-4">
+                                                                <button type="submit" class="btn text-white px-4"
+                                                                    style="background-color: #10AC84;"
+                                                                    data-bs-dismiss="modal">
+                                                                    Update
+                                                                </button>
+                                                            </div>
+                                                        </form>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                                <!-- Col 3 -->
+                                <tr>
+                                    <td><input type="checkbox" disabled></td>
+                                    <td style="font-size:13px;">Screenshot_20250705_160511_WPS <br>Office.jpg</td>
+                                    <td style="font-size:13px;">Financial</td>
+                                    <td style="font-size:13px;">Local Disk (Default)</td>
+                                    <td style="font-size:13px;">Obaid Khan</td>
+                                    <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    <td><span class="badge"
+                                            style="background-color: #ffe6ea; color:#ff3a57">Pending</span></td>
+                                    <td>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                                <!-- COl 4 -->
+                                <tr>
+                                    <td><input type="checkbox" disabled></td>
+                                    <td style="font-size:13px;">document.pdf</td>
+                                    <td style="font-size:13px;">Proposal</td>
+                                    <td style="font-size:13px;">Local Disk (Default)</td>
+                                    <td style="font-size:13px;">Obaid Khan</td>
+                                    <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    <td><span class="badge"
+                                            style="background-color: #e8faee; color: #17c653;">Approved</span></td>
+                                    <td>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm "
+                                            style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                                <!-- Col 5 -->
+                                <tr>
+                                    <td><input type="checkbox" disabled></td>
+                                    <td style="font-size:13px;">file_example_XLS_10.xls</td>
+                                    <td style="font-size:13px;">Proposal</td>
+                                    <td style="font-size:13px;">Local Disk (Default)</td>
+                                    <td style="font-size:13px;">Obaid Khan</td>
+                                    <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    <td><span class="badge"
+                                            style="background-color: #ffe6ea; color:#ff3a57">Pending</span></td>
+                                    <td>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                                <!-- Col 6 -->
+                                <tr>
+                                    <td><input type="checkbox" disabled></td>
+                                    <td style="font-size:13px;">Chimbote.docx</td>
+                                    <td style="font-size:13px;">Financial</td>
+                                    <td style="font-size:13px;">Local Disk (Default)</td>
+                                    <td style="font-size:13px;">Obaid Khan</td>
+                                    <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    <td><span class="badge"
+                                            style="background-color: #e8faee; color: #17c653;">Approved</span></td>
+                                    <td>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm "
+                                            style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                                <!-- Col 7 -->
+                                <tr>
+                                    <td><input type="checkbox" disabled></td>
+                                    <td style="font-size:13px;">Chimbote.docx</td>
+                                    <td style="font-size:13px;">Financial</td>
+                                    <td style="font-size:13px;">Local Disk (Default)</td>
+                                    <td style="font-size:13px;">Obaid Khan</td>
+                                    <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    <td><span class="badge"
+                                            style="background-color: #e8faee; color: #17c653;">Approved</span></td>
+                                    <td>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm "
+                                            style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                                <!-- Col 8 -->
+                                <tr>
+                                    <td><input type="checkbox" disabled></td>
+                                    <td style="font-size:13px;">Chimbote.docx</td>
+                                    <td style="font-size:13px;">Financial</td>
+                                    <td style="font-size:13px;">Local Disk (Default)</td>
+                                    <td style="font-size:13px;">Obaid Khan</td>
+                                    <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    <td><span class="badge"
+                                            style="background-color: #e8faee; color: #17c653;">Approved</span></td>
+                                    <td>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm "
+                                            style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-end">
+                            <li class="page-item disabled">
+                                <a class="page-link">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">...</a></li>
+                            <li class="page-item"><a class="page-link" href="#">99</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </main>
+
+
+
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        const toggleBtn = document.querySelector(".toggle-sidebar-btn");
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector(".sidebar-overlay");
+
+        toggleBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("show");
+            overlay.style.display = sidebar.classList.contains("show") ? "block" : "none";
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.remove("show");
+            overlay.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>

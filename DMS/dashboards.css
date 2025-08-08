@@ -1,0 +1,417 @@
+                        /* DASHBOARD STYLING */
+ 
+ body {
+     overflow-x: hidden;
+  animation: zoomFade 0.5s ease-in-out;
+}
+
+
+@keyframes zoomFade {
+  0% {
+    transform: scale(1.02);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+ .sidebar {
+     height: 100vh;
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 16.6667%;
+     z-index: 1030;
+ }
+ .sidebar a,
+.sidebar a:visited,
+.sidebar a:hover,
+.sidebar a:active {
+  text-decoration: none !important;
+}
+
+ main {
+     margin-left: 16.6667%;
+     /* same as sidebar width */
+ }
+
+ 
+
+ 
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    width: 200px;
+    left: -200px;
+    transition: left 0.3s ease;
+    background-color: #19E47F;
+    z-index: 1050;
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+
+  main {
+    margin-left: 0 !important;
+  }
+
+  .toggle-sidebar-btn {
+    display: inline-block;
+  }
+}
+
+.toggle-sidebar-btn {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+}
+
+main {
+    margin-left: 16.6667%;
+    transition: margin-left 0.3s ease;
+}
+
+/* Mobile override already exists but ensure priority */
+@media (max-width: 768px) {
+    main {
+        margin-left: 0 !important;
+    }
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1040;
+}
+
+.sidebar.show ~ .sidebar-overlay {
+    display: block;
+}
+
+
+                /* OCR-DOCUMENT STYLING */
+
+.drop-zone {
+      border: 2px dashed #10AC84;
+      padding: 40px;
+      text-align: center;
+      border-radius: 10px;
+      background-color: #f8f9fa;
+    }
+
+    .drop-zone img {
+      width: 80px;
+      height: auto;
+    }
+
+    .upload-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* prevent wrapping of icon */
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.upload-box img {
+    width: 30px;
+    height: auto;
+    flex-shrink: 0; /* don’t shrink image */
+}
+
+/* File name + size + progress container */
+.upload-box > div:nth-child(2) {
+    flex: 1 1 auto;
+    min-width: 0; /* allow it to shrink if needed */
+}
+
+/* ICON RIGHT (cross or trash) */
+.icon, .icon-second {
+    flex-shrink: 0; /* do not allow icon to shrink */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon p {
+    font-size: 10px;
+    margin: 0;
+}
+
+.progress-bar-container {
+    margin-top: 5px;
+    height: 4px;
+    width: 80%;
+    background-color: #e0e0e0;
+    border-radius: 0 0 10px 10px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 100%; /* or any percent to simulate progress */
+    background-color: #25c16f;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .upload-box {
+        flex-wrap: wrap; /* allow wrapping only on small screens */
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .upload-box img {
+        margin-bottom: 5px;
+    }
+
+    .upload-box > div:nth-child(2) {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+
+    .icon, .icon-second {
+        align-self: flex-end;
+        margin-top: 8px;
+    }
+}
+
+
+                  /* SCAN-DOCUMENT STYLING */
+
+
+ /* Basic Reset */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Prevent background scroll when sidebar is open */
+body.sidebar-open {
+  overflow: hidden;
+}
+
+/* Sidebar behavior for small screens */
+.sidebar.show {
+  display: block !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1040;
+  width: 220px;
+  background-color: #10AC84;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Overlay on mobile */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1030;
+}
+
+
+
+
+
+/* Prevent bottom stickiness */
+main {
+  padding-bottom: 60px;
+}
+
+/* Cards spacing and size */
+.col-md-5 .p-5 {
+  height: 100%;
+}
+
+
+
+/* SCAN-DOCUMENT-SCANBTN-STYLING */
+
+
+@media (max-width: 1200px) {
+    .responsive-img {
+        width: 110px;
+    }
+}
+
+@media (max-width: 992px) {
+    .responsive-img {
+        width: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .responsive-img {
+        width: 70px;
+    }
+}
+
+@media (max-width: 576px) {
+    .responsive-img {
+        width: 60px;
+    }
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.clickable-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.clickable-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+/* Default button width */
+.responsive-btn {
+  width: 140px;
+}
+
+/* For medium screens (tablet) */
+@media (max-width: 992px) {
+  .responsive-btn {
+    width: 120px;
+  }
+}
+
+
+/* For small screens (mobile landscape) */
+@media (max-width: 768px) {
+  .responsive-btn {
+    width: 100px;
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+/* For extra small screens (mobile portrait) */
+@media (max-width: 576px) {
+  .responsive-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .responsive-btn + .responsive-btn {
+    margin-left: 0; /* remove side gap if stacked */
+  }
+
+  .d-flex.justify-content-end {
+    align-items: stretch;
+  }
+}
+
+
+      /* USER MANAGEMENT FORM STYLING */
+
+.upload-box-1 {
+    border:  #ccc;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    width: 170px;
+    background-color: #f3f3f3;
+}
+
+.upload-box-1:hover {
+    background-color: #f8f9fa;
+}
+
+
+.modal-dialog-slideout {
+  position: fixed;
+  margin: 0;
+  right: 0;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  max-width: 500px; /* adjust width as needed */
+}
+
+.modal.fade.show .modal-dialog-slideout {
+  transform: translateX(0);
+}
+
+.modal-dialog-slideout .modal-content {
+  height: 100%;
+  border-radius: 0;
+}
+
+/* Full-height modal with right-side slide-in */
+.modal-right .modal-dialog {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  width: 100%;
+  max-width: 500px;
+  margin: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  height: 100%;
+  pointer-events: none;
+}
+
+.modal.modal-right.show .modal-dialog {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.modal-right .modal-content {
+  height: 100%;
+  border-radius: 0;
+}
+
+.modal-dialog-end {
+    margin: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    max-width: 600px;
+    width: 100%;
+}
+
+.modal-dialog-start {
+  margin: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+
+
+

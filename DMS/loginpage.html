@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Login</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="CSS FILE/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style(loginpage).css">
+</head>
+
+<body>
+  <div class="login-page bg-emerald min-vh-100 d-flex align-items-center justify-content-center overflow-hidden">
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-center min-vh-100 g-0">
+
+        <!-- Left Side (Visible only on large screens) -->
+        <div class="col-lg-7 d-none d-lg-flex flex-column align-items-start justify-content-center pe-5">
+          <div class="mb-5">
+            <div class="p-4 d-inline-block">
+              <div class="text-center logo-placeholder">
+                <img src="login-logo.png" class="img-fluid w-75" alt="Logo" />
+              </div>
+            </div>
+          </div>
+          <div class="laptop">
+            <img src="login-img.png" class="laptop-shadow img-fluid w-75 ps-5" alt="Laptop Image" />
+          </div>
+        </div>
+
+        <!-- Right Side - Login Form -->
+        <div class="login-form col-lg-5 col-md-8 col-sm-10 mx-auto pe-lg-5 px-3">
+          <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-body p-5">
+              <img src="login-form-logo.png" class="img-fluid w-50" alt="Form Logo" />
+
+              <h2 class="fs-4 fw-semibold text-dark pt-4">Login your account!</h2>
+
+              <form>
+                <!-- Username -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text with-divider">
+                    <i class="fa fa-user text-muted opacity-50"></i>
+                  </span>
+                  <input type="text" class="form-control form-control-lg fw-medium fs-6 opacity-50" id="username"
+                    placeholder="Username" />
+                </div>
+
+                <!-- Password -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text with-divider">
+                    <i class="fa fa-lock text-muted opacity-50"></i>
+                  </span>
+                  <input type="password" class="form-control form-control-lg fw-medium fs-6 opacity-50" id="password"
+                    placeholder="Password" />
+                </div>
+
+                <!-- Remember Me -->
+                <div class="mb-2 pt-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="remember" />
+                    <label class="form-check-label text-primary" for="remember">Remember me</label>
+                  </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="pt-3"></div>
+                <button type="submit" class="btn btn-emerald text-white fw-semibold w-100">LOGIN</button>
+
+                <!-- Divider -->
+                <div class="position-relative my-4">
+                  <hr />
+                  <span class="position-absolute top-50 start-50 translate-middle bg-white px-2 text-muted small">or</span>
+                </div>
+
+                <!-- Google Sign In -->
+                <div class="d-flex justify-content-center">
+                  <button type="button"
+                    class="signup-google btn border-1 border-grey rounded-5 d-flex align-items-center justify-content-center">
+                    <img src="google.svg" class="me-2" alt="Google Icon" />
+                    Sign in with Google
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>

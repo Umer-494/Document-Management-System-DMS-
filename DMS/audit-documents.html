@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS FILE/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboards.css">
+    <title>Document</title>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid px-0">
+        <div class="row gx-0">
+            <div class="col-12">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm bg-body-tertiary px-3">
+                    <div class="container-fluid">
+
+                        <!-- Toggler for small screens -->
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <!-- Offcanvas Toggle Button (Left Side) -->
+                            <button class="btn btn-light rounded-circle d-lg-none m-2 shadow-sm" type="button"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar"
+                                aria-controls="offcanvasSidebar"
+                                style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+
+                            <!-- Spacer to push navbar toggler to the right -->
+                            <div class="flex-grow-1"></div>
+
+                            <!-- Navbar Toggle Button (Right Side) -->
+                            <button class="navbar-toggler d-lg-none m-2" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#topNav" aria-controls="topNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+
+
+
+
+                        <!-- Navbar content -->
+                        <div class="collapse navbar-collapse" id="topNav">
+                            <div class="ms-auto d-flex align-items-center gap-3 mt-2 mt-lg-0">
+
+                                <!-- Search Box with Icon -->
+                                <div class="input-group rounded flex-grow-1" style="max-width: 220px;">
+                                    <span class="input-group-text bg-white border-end-0"
+                                        style="border-top-left-radius: 50px; border-bottom-left-radius: 50px;">
+                                        <i class="fas fa-search text-muted"></i>
+                                    </span>
+
+                                    <input type="search" class="form-control border-start-0" placeholder="Search"
+                                        style="border-top-right-radius: 50px; border-bottom-right-radius: 50px;" />
+                                </div>
+
+                                <!-- Bell Icon -->
+                                <i class="fas fa-bell fs-5 text-secondary" style="cursor: pointer;"></i>
+
+                                <!-- Half Moon Icon -->
+                                <i class="fas fa-moon fs-5 text-secondary" style="cursor: pointer;"></i>
+
+                                <!-- Info Icon -->
+                                <i class="fas fa-info-circle fs-5 text-secondary" style="cursor: pointer;"></i>
+
+                                <!-- Profile Image -->
+                                <img src="nav-profile.svg" alt="Profile" class="rounded-circle" width="35" height="35"
+                                    style="object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-0">
+        <div class="row gx-0">
+            <!-- Sidebar -->
+            <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="offcanvasSidebar"
+                aria-labelledby="offcanvasSidebarLabel" style="background-color: #10AC84;">
+
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <!-- FLEX CONTAINER to push footer down -->
+                <div class="offcanvas-body d-flex flex-column justify-content-between p-0">
+
+                    <!-- Scrollable Navigation Links -->
+                    <div class="p-3 overflow-auto">
+                        <div class="mb-4">
+                            <img src="login-logo.png" class="img-fluid w-75">
+                        </div>
+
+                        <a href="dashboard.html" class="d-block py-2 text-white d-flex align-items-center gap-2"
+                            style="font-size: 15px; text-decoration: none;">
+                            <img src="dashboard.png" style="width: 20px;">Dashboard
+                        </a>
+                        <a href="scan-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="scan.png" style="width: 20px;">Scan Documents
+                        </a>
+                        <a href="ocr-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="ocr.png" style="width: 20px;">OCR Documents
+                        </a>
+                        <a href="retrieve-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="rertrieve.png" style="width: 20px;">Retrieve Documents
+                        </a>
+                        <a href="all-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="alldoc.png" style="width: 20px;">All Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="archieve.png" style="width: 20px;">Archive Documents
+                        </a>
+                        <a href="user-management.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="user.png" style="width: 20px;">User Management
+                        </a>
+                        <a href="audit-documents.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="audit.png" style="width: 20px;">Audit Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="setting.png" style="width: 20px;">Settings
+                        </a>
+                    </div>
+
+                    <!-- Sticky Footer -->
+                    <div class="text-white text-center w-100 py-2 px-1"
+                        style="font-size: 12px; opacity: 0.7; background-color: #46a877;">
+                        Powered by Solochoicez Pvt. Ltd.
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Regular Sidebar (visible only on desktop) -->
+            <div class="col-2 d-none d-md-block sidebar text-white p-0"
+                style="background-color: #10AC84; height: 100vh; overflow-y: auto;">
+
+                <div class="d-flex flex-column justify-content-between h-100">
+
+                    <!-- Sidebar Top -->
+                    <div class="p-3">
+                        <div class="mb-4">
+                            <img src="login-logo.png" class="img-fluid w-75">
+                        </div>
+
+                        <a href="dashboard.html" class="d-block py-2 text-white d-flex align-items-center gap-2"
+                            style="font-size: 15px;">
+                            <img src="dashboard.png" style="width: 20px;">Dashboard
+                        </a>
+                        <a href="scan-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="scan.png" style="width: 20px;">Scan Documents
+                        </a>
+                        <a href="ocr-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="ocr.png" style="width: 20px;">OCR Documents
+                        </a>
+                        <a href="retrieve-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="rertrieve.png" style="width: 20px;">Retrieve Documents
+                        </a>
+                        <a href="all-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="alldoc.png" style="width: 20px;">All Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="archieve.png" style="width: 20px;">Archive Documents
+                        </a>
+                        <a href="user-management.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="user.png" style="width: 20px;">User Management
+                        </a>
+                        <a href="audit-documents.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="audit.png" style="width: 20px;">Audit Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="setting.png" style="width: 20px;">Settings
+                        </a>
+                    </div>
+
+                    <!-- Sidebar Bottom Footer -->
+                    <div class=" text-white text-center w-100"
+                        style="font-size: 12px; padding: 10px; background-color: #46a877;">
+                        Powered by Solochoicez Pvt. Ltd.
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Main Content -->
+
+            <main class="col-md-10 px-4 pt-5 mt-3">
+                <div class="container-fluid">
+                    <!-- Header -->
+                    <div
+                        class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-2">
+                        <div class="mb-2 mb-md-0">
+                            <h4 class="fw-bold mb-0">Audit Documents</h4>
+                            <p class="mb-0" style="font-size: 14px; font-weight: 500; color: rgb(141, 138, 138);">All
+                                List</p>
+                        </div>
+                    </div>
+
+                    <!-- Underline -->
+                    <hr style="border: none; border-top: 1px solid #837e7e; margin: 0 2px 20px 2px;">
+
+                    <!-- Document Table -->
+                    <!-- Document Table Wrapped in Box -->
+                    <div
+                        style="background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 20px;">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th><input type="checkbox" disabled></th>
+                                        <th style="color: #9b9ea0; font-size: 13px;">Docs Name</th>
+                                        <th style="color: #9b9ea0; font-size: 13px;">IP Address</th>
+                                        <th style="color: #9b9ea0; font-size: 13px;">Last Activity</th>
+                                        <th style="color: #9b9ea0; font-size: 13px;">Created By</th>
+                                        <th style="color: #9b9ea0; font-size: 13px;">Last Update</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" disabled></td>
+                                        <td style="font-size:13px;">System Maturity integration.pdf</td>
+                                        <td style="font-size:13px;">192.0.0.1</td>
+                                        <td style="font-size:13px;">Edit</td>
+                                        <td style="font-size:13px;">Obaid Khan</td>
+                                        <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" disabled></td>
+                                        <td style="font-size:13px;">Screenshot_20250705_160511_WPS Office.jpg</td>
+                                        <td style="font-size:13px;">192.0.0.1</td>
+                                        <td style="font-size:13px;">View</td>
+                                        <td style="font-size:13px;">Obaid Khan</td>
+                                        <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" disabled></td>
+                                        <td style="font-size:13px;">document.pdf</td>
+                                        <td style="font-size:13px;">192.0.0.1</td>
+                                        <td style="font-size:13px;">View</td>
+                                        <td style="font-size:13px;">Obaid Khan</td>
+                                        <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" disabled></td>
+                                        <td style="font-size:13px;">file_example_XLS_10.xls</td>
+                                        <td style="font-size:13px;">192.0.0.1</td>
+                                        <td style="font-size:13px;">View</td>
+                                        <td style="font-size:13px;">Obaid Khan</td>
+                                        <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" disabled></td>
+                                        <td style="font-size:13px;">Chimbote.docx</td>
+                                        <td style="font-size:13px;">192.0.0.1</td>
+                                        <td style="font-size:13px;">Edit</td>
+                                        <td style="font-size:13px;">Obaid Khan</td>
+                                        <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" disabled></td>
+                                        <td style="font-size:13px;">Chimbote.docx</td>
+                                        <td style="font-size:13px;">192.0.0.1</td>
+                                        <td style="font-size:13px;">Edit</td>
+                                        <td style="font-size:13px;">Obaid Khan</td>
+                                        <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" disabled></td>
+                                        <td style="font-size:13px;">Chimbote.docx</td>
+                                        <td style="font-size:13px;">192.0.0.1</td>
+                                        <td style="font-size:13px;">Edit</td>
+                                        <td style="font-size:13px;">Obaid Khan</td>
+                                        <td style="font-size:13px;">Jun 27, 2025 <br>02:15</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-end">
+                            <li class="page-item disabled">
+                                <a class="page-link">&lt;</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">...</a></li>
+                            <li class="page-item"><a class="page-link" href="#">99</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">&gt;</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </main>
+
+
+
+
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        const toggleBtn = document.querySelector(".toggle-sidebar-btn");
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector(".sidebar-overlay");
+
+        toggleBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("show");
+            overlay.style.display = sidebar.classList.contains("show") ? "block" : "none";
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.remove("show");
+            overlay.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS FILE/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboards.css">
+    <title>Document</title>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid px-0">
+        <div class="row gx-0">
+            <div class="col-12">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm bg-body-tertiary px-3">
+        <div class="container-fluid">
+
+            <!-- Toggler for small screens -->
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <!-- Offcanvas Toggle Button (Left Side) -->
+                <button class="btn btn-light rounded-circle d-lg-none m-2 shadow-sm" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"
+                    style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Spacer to push navbar toggler to the right -->
+                <div class="flex-grow-1"></div>
+
+                <!-- Navbar Toggle Button (Right Side) -->
+                <button class="navbar-toggler d-lg-none m-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#topNav" aria-controls="topNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+
+
+
+            <!-- Navbar content -->
+            <div class="collapse navbar-collapse" id="topNav">
+                <div class="ms-auto d-flex align-items-center gap-3 mt-2 mt-lg-0">
+
+                    <!-- Search Box with Icon -->
+                    <div class="input-group rounded flex-grow-1" style="max-width: 220px;">
+                        <span class="input-group-text bg-white border-end-0"
+                            style="border-top-left-radius: 50px; border-bottom-left-radius: 50px;">
+                            <i class="fas fa-search text-muted"></i>
+                        </span>
+
+                        <input type="search" class="form-control border-start-0" placeholder="Search"
+                            style="border-top-right-radius: 50px; border-bottom-right-radius: 50px;" />
+                    </div>
+
+                    <!-- Bell Icon -->
+                    <i class="fas fa-bell fs-5 text-secondary" style="cursor: pointer;"></i>
+
+                    <!-- Half Moon Icon -->
+                    <i class="fas fa-moon fs-5 text-secondary" style="cursor: pointer;"></i>
+
+                    <!-- Info Icon -->
+                    <i class="fas fa-info-circle fs-5 text-secondary" style="cursor: pointer;"></i>
+
+                    <!-- Profile Image -->
+                    <img src="nav-profile.svg" alt="Profile" class="rounded-circle" width="35" height="35"
+                        style="object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-0">
+        <div class="row gx-0">
+            <!-- Sidebar -->
+            <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="offcanvasSidebar"
+                aria-labelledby="offcanvasSidebarLabel" style="background-color: #10AC84;">
+
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <!-- FLEX CONTAINER to push footer down -->
+                <div class="offcanvas-body d-flex flex-column justify-content-between p-0">
+
+                    <!-- Scrollable Navigation Links -->
+                    <div class="p-3 overflow-auto">
+                        <div class="mb-4">
+                            <img src="login-logo.png" class="img-fluid w-75">
+                        </div>
+
+                        <a href="dashboard.html" class="d-block py-2 text-white d-flex align-items-center gap-2"
+                            style="font-size: 15px; text-decoration: none;">
+                            <img src="dashboard.png" style="width: 20px;">Dashboard
+                        </a>
+                        <a href="scan-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="scan.png" style="width: 20px;">Scan Documents
+                        </a>
+                        <a href="ocr-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="ocr.png" style="width: 20px;">OCR Documents
+                        </a>
+                        <a href="retrieve-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="rertrieve.png" style="width: 20px;">Retrieve Documents
+                        </a>
+                        <a href="all-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="alldoc.png" style="width: 20px;">All Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="archieve.png" style="width: 20px;">Archive Documents
+                        </a>
+                        <a href="user-management.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="user.png" style="width: 20px;">User Management
+                        </a>
+                        <a href="audit-documents.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="audit.png" style="width: 20px;">Audit Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="setting.png" style="width: 20px;">Settings
+                        </a>
+                    </div>
+
+                    <!-- Sticky Footer -->
+                    <div class="text-white text-center w-100 py-2 px-1"
+                        style="font-size: 12px; opacity: 0.7; background-color: #46a877;">
+                        Powered by Solochoicez Pvt. Ltd.
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Regular Sidebar (visible only on desktop) -->
+            <div class="col-2 d-none d-md-block sidebar text-white p-0"
+                style="background-color: #10AC84; height: 100vh; overflow-y: auto;">
+
+                <div class="d-flex flex-column justify-content-between h-100">
+
+                    <!-- Sidebar Top -->
+                    <div class="p-3">
+                        <div class="mb-4">
+                            <img src="login-logo.png" class="img-fluid w-75">
+                        </div>
+
+                        <a href="dashboard.html" class="d-block py-2 text-white d-flex align-items-center gap-2"
+                            style="font-size: 15px;">
+                            <img src="dashboard.png" style="width: 20px;">Dashboard
+                        </a>
+                        <a href="scan-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="scan.png" style="width: 20px;">Scan Documents
+                        </a>
+                        <a href="ocr-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="ocr.png" style="width: 20px;">OCR Documents
+                        </a>
+                        <a href="retrieve-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="rertrieve.png" style="width: 20px;">Retrieve Documents
+                        </a>
+                        <a href="all-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="alldoc.png" style="width: 20px;">All Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="archieve.png" style="width: 20px;">Archive Documents
+                        </a>
+                        <a href="user-management.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="user.png" style="width: 20px;">User Management
+                        </a>
+                        <a href="audit-documents.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="audit.png" style="width: 20px;">Audit Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="setting.png" style="width: 20px;">Settings
+                        </a>
+                    </div>
+
+                    <!-- Sidebar Bottom Footer -->
+                    <div class=" text-white text-center w-100"
+                        style="font-size: 12px; padding: 10px; background-color: #46a877;">
+                        Powered by Solochoicez Pvt. Ltd.
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Main Content -->
+
+            <main class="col-md-10 px-4 pt-3 mt-3">
+                <div class="container-fluid">
+                    <!-- Header -->
+                    <div
+                        class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-2">
+                        <div class="mb-2 mb-md-0">
+                            <h4 class="fw-bold mb-0">User</h4>
+                            <p class="mb-0" style="font-size: 14px; font-weight: 500; color: rgb(141, 138, 138);">List
+                            </p>
+                        </div>
+
+
+                        <!-- Slide Form Panel/ADD NEW USER FORM -->
+                        <button type="button" class="btn " style="background-color: #10AC84; color: white;"
+                            data-bs-toggle="modal" data-bs-target="#addUserModal">
+                            Add New User
+                        </button>
+
+                        <!-- Right-Aligned Modal -->
+                        <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-slideout modal-lg">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title fw-bold" id="addUserModalLabel">Add User</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <hr class="mt-0 mb-4" style="border: none; border-top: 1px solid #837e7e;">
+
+                                    <!-- Modal Body -->
+                                    <div class="modal-body">
+                                        <!-- Upload Image -->
+                                        <div class="mb-4 text-start">
+                                            <div class="upload-box-1 rounded"
+                                                onclick="document.getElementById('fileInput').click();"
+                                                style="padding: 30px; text-align: center; cursor: pointer;">
+                                                <div>
+                                                    <i class="bi bi-upload"
+                                                        style="font-size: 24px; color: #9b9ea0;"></i><br>
+                                                    <p class="pt-3 fw-medium">Upload Image</p>
+                                                </div>
+                                                <input type="file" id="fileInput" hidden>
+                                            </div>
+                                        </div>
+
+                                        <!-- Form -->
+                                        <form>
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label>Name</label>
+                                                    <input type="text" class="form-control" placeholder="Lorem ipsum">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Phone Number</label>
+                                                    <input type="text" class="form-control" placeholder="+92**********">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Role</label>
+                                                    <select class="form-select">
+                                                        <option selected disabled>Select</option>
+                                                        <option>Admin</option>
+                                                        <option>User</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Email</label>
+                                                    <input type="email" class="form-control"
+                                                        placeholder="demo@eoffice.com">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Password</label>
+                                                    <div class="input-group">
+                                                        <input type="password" id="passwordInput"
+                                                            class="form-control text-secondary"
+                                                            placeholder="Enter your password"
+                                                            style="color: #6c757d; border-right: none;">
+                                                        <span class="input-group-text bg-white" id="togglePassword"
+                                                            style="border-left: none; cursor: pointer;">
+                                                            <i class="bi bi-eye text-secondary" id="eyeIcon"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Confirm Password</label>
+                                                    <div class="input-group">
+                                                        <input type="password" id="confirmPasswordInput"
+                                                            class="form-control text-secondary"
+                                                            placeholder="Enter your password"
+                                                            style="color: #6c757d; border-right: none;">
+                                                        <span class="input-group-text bg-white"
+                                                            id="toggleConfirmPassword"
+                                                            style="border-left: none; cursor: pointer;">
+                                                            <i class="bi bi-eye text-secondary" id="confirmEyeIcon"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!-- Modal Footer -->
+                                    <div class="text-end p-4">
+                                        <button type="button" class="btn"
+                                            style="border-color: #10AC84; color:#10AC84; width: 120px;"
+                                            data-bs-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn text-white" data-bs-dismiss="modal"
+                                            style="background-color: #10AC84; width: 120px;">Add User</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- Underline -->
+                    <hr style="border: none; border-top: 1px solid #837e7e; margin: 0 2px 20px 2px;">
+
+                    <!-- Table Wrapped in Box -->
+
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th><input type="checkbox" disabled></th>
+                                    <th style="color: #9b9ea0; font-size: 13px;">Name</th>
+                                    <th style="color: #9b9ea0; font-size: 13px;">Email</th>
+                                    <th style="color: #9b9ea0; font-size: 13px;">Role</th>
+                                    <th style="color: #9b9ea0; font-size: 13px;">Phone No.</th>
+                                    <th style="color: #9b9ea0; font-size: 13px;">Status</th>
+                                    <th style="color: #9b9ea0; font-size: 13px;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" disabled></td>
+                                    <td style="font-size:13px;">
+                                        <img src="user-mng1.svg" class="rounded-circle me-2" width="30" height="30"
+                                            alt="User">Anwar Kamal
+                                    </td>
+                                    <td style="font-size:13px;">anwar@solochoicez.com</td>
+                                    <td style="font-size:13px;">Admin</td>
+                                    <td style="font-size:13px;">0333 5689523</td>
+                                    <td><span class="badge"
+                                            style="background-color: #e8faee; color: #17c653;">Active</span></td>
+
+                                    <!-- EYE BUTTON FORM -->
+                                    <td>
+                                        <!-- View Button -->
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"
+                                            data-bs-toggle="modal" data-bs-target="#viewUserModal">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+
+                                        <!-- View User Modal -->
+                                        <div class="modal fade" id="viewUserModal" tabindex="-1"
+                                            aria-labelledby="viewUserModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-fullscreen m-0">
+                                                <div class="modal-content border-0 rounded-0"
+                                                    style="margin-left: auto; width: 100%; max-width: 500px;">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title fw-bold mb-0" id="viewUserModalLabel">
+                                                            View User Details</h4>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+
+                                                    <!-- Horizontal Line -->
+                                                    <hr
+                                                        style="border: none; border-top: 1px solid #837e7e; margin: 0 2px 20px 2px;">
+
+                                                    <!-- Modal Body -->
+                                                    <div class="modal-body">
+                                                        <!-- Image + Name/Role -->
+                                                        <div
+                                                            class="d-flex flex-column flex-sm-row align-items-center mb-4">
+                                                            <img src="img/boyimg.png" alt="User"
+                                                                class="mb-3 img-thumbnail mb-sm-0" width="200"
+                                                                height="200"
+                                                                style="object-fit: contain; border-radius: 0;">
+                                                            <div class="ms-sm-4 text-center text-sm-start">
+                                                                <h5 id="viewUserName" class="mb-1 fw-bold">Anwar Kamal
+                                                                </h5>
+                                                                <p id="viewUserRole" class="mb-0 text-muted">Admin</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- User Details -->
+                                                        <div class="row">
+                                                            <div class="col-12 mb-3 d-flex justify-content-between p-3 rounded"
+                                                                style="background-color: #fafafa;">
+                                                                <span class="fw-semibold">Email:</span>
+                                                                <span id="viewEmail">demo@office.com</span>
+                                                            </div>
+                                                            <div class="col-12 mb-3 d-flex justify-content-between p-3 rounded"
+                                                                style="background-color: #fafafa;">
+                                                                <span class="fw-semibold">Password:</span>
+                                                                <span id="viewPassword">123456!@#</span>
+                                                            </div>
+                                                            <div class="col-12 mb-3 d-flex justify-content-between p-3 rounded"
+                                                                style="background-color: #fafafa;">
+                                                                <span class="fw-semibold">Role:</span>
+                                                                <span id="viewRole">Admin</span>
+                                                            </div>
+                                                            <div class="col-12 mb-3 d-flex justify-content-between p-3 rounded"
+                                                                style="background-color: #fafafa;">
+                                                                <span class="fw-semibold">Status:</span>
+                                                                <span id="viewStatus"
+                                                                    class="text-success fw-semibold">Active</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- EDIT BUTTON FORM -->
+
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"
+                                            data-bs-toggle="modal" data-bs-target="#editUserModal">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+
+                                        <!-- Edit User Modal -->
+                                        <div class="modal fade" id="editUserModal" tabindex="-1"
+                                            aria-labelledby="editUserModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-fullscreen m-0">
+                                                <div class="modal-content border-0 rounded-0"
+                                                    style="margin-left: auto; width: 100%; max-width: 500px;">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="editUserModalLabel">Edit User</h4>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+
+                                                    <hr
+                                                        style="border: none; border-top: 1px solid #837e7e; margin: 0 2px 20px 2px;">
+
+                                                    <!-- Modal Body -->
+                                                    <div class="modal-body">
+                                                        <!-- Image -->
+                                                        <div class="mb-4 text-center text-sm-start">
+                                                            <img src="img/boyimg.png" alt="User"
+                                                                class="mb-3 img-thumbnail mb-sm-0" width="200"
+                                                                height="200"
+                                                                style="object-fit: contain; border-radius: 0;">
+                                                        </div>
+
+                                                        <!-- Form -->
+                                                        <form>
+                                                            <div class="row g-3">
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Anwar Kamal">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Phone Number</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="+92**********">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Role</label>
+                                                                    <select class="form-select">
+                                                                        <option selected disabled>Select</option>
+                                                                        <option>Admin</option>
+                                                                        <option>User</option>
+                                                                        <option>Employee</option>
+                                                                        <option>Client</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Email</label>
+                                                                    <input type="email" class="form-control"
+                                                                        placeholder="demo@eoffice.com">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Password</label>
+                                                                    <div class="input-group">
+                                                                        <input type="password" class="form-control"
+                                                                            placeholder="Enter password"
+                                                                            style="border-right: none;">
+                                                                        <span class="input-group-text bg-white"
+                                                                            style="border-left: none; cursor: pointer;">
+                                                                            <i class="bi bi-eye text-secondary"></i>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Confirm Password</label>
+                                                                    <div class="input-group">
+                                                                        <input type="password" class="form-control"
+                                                                            placeholder="Confirm password"
+                                                                            style="border-right: none;">
+                                                                        <span class="input-group-text bg-white"
+                                                                            style="border-left: none; cursor: pointer;">
+                                                                            <i class="bi bi-eye text-secondary"></i>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Update Button -->
+                                                            <div class="d-flex justify-content-end mt-4">
+                                                                <button type="submit" class="btn text-white px-4"
+                                                                    style="background-color: #10AC84;"
+                                                                    data-bs-dismiss="modal">
+                                                                    Update
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" disabled></td>
+                                    <td style="font-size:13px;">
+                                        <img src="user-mng2.svg" class="rounded-circle me-2" width="30" height="30"
+                                            alt="User">Anwar Kamal
+                                    </td>
+                                    <td style="font-size:13px;">demo@eoffice.com</td>
+                                    <td style="font-size:13px;">Client</td>
+                                    <td style="font-size:13px;">126 28926178</td>
+                                    <td><span class="badge"
+                                            style="background-color: #e8faee; color: #17c653;">Active</span></td>
+                                    <td>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" disabled></td>
+                                    <td style="font-size:13px;">
+                                        <img src="user-mng2.svg" class="rounded-circle me-2" width="30" height="30"
+                                            alt="User">Anwar Kamal
+                                    </td>
+                                    <td style="font-size:13px;">demo@eoffice.com</td>
+                                    <td style="font-size:13px;">Admin</td>
+                                    <td style="font-size:13px;">09745711617</td>
+                                    <td><span class="badge"
+                                            style="background-color: #e8faee; color: #17c653;">Active</span></td>
+                                    <td>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" disabled></td>
+                                    <td style="font-size:13px;">
+                                        <img src="user-mng2.svg" class="rounded-circle me-2" width="30" height="30"
+                                            alt="User">Anwar Kamal
+                                    </td>
+                                    <td style="font-size:13px;">demo@eoffice.com</td>
+                                    <td style="font-size:13px;">Employee</td>
+                                    <td style="font-size:13px;">12478920237</td>
+                                    <td><span class="badge"
+                                            style="background-color: #e8faee; color: #17c653;">Active</span></td>
+                                    <td>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" disabled></td>
+                                    <td style="font-size:13px;">
+                                        <img src="user-mng2.svg" class="rounded-circle me-2" width="30" height="30"
+                                            alt="User">Anwar Kamal
+                                    </td>
+                                    <td style="font-size:13px;">demo@eoffice.com</td>
+                                    <td style="font-size:13px;">Employee</td>
+                                    <td style="font-size:13px;">12348954012</td>
+                                    <td><span class="badge"
+                                            style="background-color: #ffe6ea; color:#ff3a57">InActive</span></td>
+                                    <td>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" disabled></td>
+                                    <td style="font-size:13px;">
+                                        <img src="user-mng2.svg" class="rounded-circle me-2" width="30" height="30"
+                                            alt="User">Anwar Kamal
+                                    </td>
+                                    <td style="font-size:13px;">demo@eoffice.com</td>
+                                    <td style="font-size:13px;">Employee</td>
+                                    <td style="font-size:13px;">12098765417</td>
+                                    <td><span class="badge"
+                                            style="background-color: #e8faee; color: #17c653;">Active</span></td>
+                                    <td>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm" style="background-color: #efefef; color: #837e7e;"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation example" class="mt-3">
+                        <ul class="pagination justify-content-end">
+                            <li class="page-item disabled">
+                                <a class="page-link">&lt;</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">...</a></li>
+                            <li class="page-item"><a class="page-link" href="#">99</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">&gt;</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </main>
+
+
+
+
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        console.log("Custom JS Loaded");
+
+        const toggleBtn = document.querySelector(".toggle-sidebar-btn");
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector(".sidebar-overlay");
+
+        // Sidebar Toggle
+        toggleBtn?.addEventListener("click", () => {
+            sidebar?.classList.toggle("show");
+            overlay.style.display = sidebar?.classList.contains("show") ? "block" : "none";
+            document.body.classList.toggle("sidebar-open", sidebar?.classList.contains("show"));
+        });
+
+        overlay?.addEventListener("click", () => {
+            sidebar?.classList.remove("show");
+            overlay.style.display = "none";
+            document.body.classList.remove("sidebar-open");
+        });
+
+    </script>
+
+
+</body>
+
+</html>

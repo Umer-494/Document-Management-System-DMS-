@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS FILE/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboards.css">
+    <title>Document</title>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid px-0">
+        <div class="row gx-0">
+            <div class="col-12">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm bg-body-tertiary px-3">
+                    <div class="container-fluid">
+
+                        <!-- Toggler for small screens -->
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <!-- Offcanvas Toggle Button (Left Side) -->
+                            <button class="btn btn-light rounded-circle d-lg-none m-2 shadow-sm" type="button"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar"
+                                aria-controls="offcanvasSidebar"
+                                style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+
+                            <!-- Spacer to push navbar toggler to the right -->
+                            <div class="flex-grow-1"></div>
+
+                            <!-- Navbar Toggle Button (Right Side) -->
+                            <button class="navbar-toggler d-lg-none m-2" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#topNav" aria-controls="topNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+
+
+
+
+                        <!-- Navbar content -->
+                        <div class="collapse navbar-collapse" id="topNav">
+                            <div class="ms-auto d-flex align-items-center gap-3 mt-2 mt-lg-0">
+
+                                <!-- Search Box with Icon -->
+                                <div class="input-group rounded flex-grow-1" style="max-width: 220px;">
+                                    <span class="input-group-text bg-white border-end-0"
+                                        style="border-top-left-radius: 50px; border-bottom-left-radius: 50px;">
+                                        <i class="fas fa-search text-muted"></i>
+                                    </span>
+
+                                    <input type="search" class="form-control border-start-0" placeholder="Search"
+                                        style="border-top-right-radius: 50px; border-bottom-right-radius: 50px;" />
+                                </div>
+
+                                <!-- Bell Icon -->
+                                <i class="fas fa-bell fs-5 text-secondary" style="cursor: pointer;"></i>
+
+                                <!-- Half Moon Icon -->
+                                <i class="fas fa-moon fs-5 text-secondary" style="cursor: pointer;"></i>
+
+                                <!-- Info Icon -->
+                                <i class="fas fa-info-circle fs-5 text-secondary" style="cursor: pointer;"></i>
+
+                                <!-- Profile Image -->
+                                <img src="nav-profile.svg" alt="Profile" class="rounded-circle" width="35" height="35"
+                                    style="object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-0">
+        <div class="row gx-0">
+            <!-- Sidebar -->
+            <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="offcanvasSidebar"
+                aria-labelledby="offcanvasSidebarLabel" style="background-color: #10AC84;">
+
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <!-- FLEX CONTAINER to push footer down -->
+                <div class="offcanvas-body d-flex flex-column justify-content-between p-0">
+
+                    <!-- Scrollable Navigation Links -->
+                    <div class="p-3 overflow-auto">
+                        <div class="mb-4">
+                            <img src="login-logo.png" class="img-fluid w-75">
+                        </div>
+
+                        <a href="dashboard.html" class="d-block py-2 text-white d-flex align-items-center gap-2"
+                            style="font-size: 15px; text-decoration: none;">
+                            <img src="dashboard.png" style="width: 20px;">Dashboard
+                        </a>
+                        <a href="scan-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="scan.png" style="width: 20px;">Scan Documents
+                        </a>
+                        <a href="ocr-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="ocr.png" style="width: 20px;">OCR Documents
+                        </a>
+                        <a href="retrieve-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="rertrieve.png" style="width: 20px;">Retrieve Documents
+                        </a>
+                        <a href="all-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="alldoc.png" style="width: 20px;">All Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="archieve.png" style="width: 20px;">Archive Documents
+                        </a>
+                        <a href="user-management.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="user.png" style="width: 20px;">User Management
+                        </a>
+                        <a href="audit-documents.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="audit.png" style="width: 20px;">Audit Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px; text-decoration: none">
+                            <img src="setting.png" style="width: 20px;">Settings
+                        </a>
+                    </div>
+
+                    <!-- Sticky Footer -->
+                    <div class="text-white text-center w-100 py-2 px-1"
+                        style="font-size: 12px; opacity: 0.7; background-color: #46a877;">
+                        Powered by Solochoicez Pvt. Ltd.
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Regular Sidebar (visible only on desktop) -->
+            <div class="col-2 d-none d-md-block sidebar text-white p-0"
+                style="background-color: #10AC84; height: 100vh; overflow-y: auto;">
+
+                <div class="d-flex flex-column justify-content-between h-100">
+
+                    <!-- Sidebar Top -->
+                    <div class="p-3">
+                        <div class="mb-4">
+                            <img src="login-logo.png" class="img-fluid w-75">
+                        </div>
+
+                        <a href="dashboard.html" class="d-block py-2 text-white d-flex align-items-center gap-2"
+                            style="font-size: 15px;">
+                            <img src="dashboard.png" style="width: 20px;">Dashboard
+                        </a>
+                        <a href="scan-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="scan.png" style="width: 20px;">Scan Documents
+                        </a>
+                        <a href="ocr-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="ocr.png" style="width: 20px;">OCR Documents
+                        </a>
+                        <a href="retrieve-document.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="rertrieve.png" style="width: 20px;">Retrieve Documents
+                        </a>
+                        <a href="all-document.html" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="alldoc.png" style="width: 20px;">All Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="archieve.png" style="width: 20px;">Archive Documents
+                        </a>
+                        <a href="user-management.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="user.png" style="width: 20px;">User Management
+                        </a>
+                        <a href="audit-documents.html"
+                            class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="audit.png" style="width: 20px;">Audit Documents
+                        </a>
+                        <a href="#" class="d-block py-2 text-white d-flex align-items-center gap-2 pt-3"
+                            style="font-size: 15px;">
+                            <img src="setting.png" style="width: 20px;">Settings
+                        </a>
+                    </div>
+
+                    <!-- Sidebar Bottom Footer -->
+                    <div class=" text-white text-center w-100"
+                        style="font-size: 12px; padding: 10px; background-color: #46a877;">
+                        Powered by Solochoicez Pvt. Ltd.
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="d-flex justify-content-center">
+                <main class="col-md-5 px-4 pt-4">
+                    <div class="text-center mb-4">
+                        <h3 class="fw-bold" style="color: #10AC84;">OCR DOCUMENTS</h3>
+                    </div>
+
+                    <!-- Drop Zone -->
+                    <div class="drop-zone mb-5">
+                        <img src="upload.png" alt="Upload" class="img-fluid" style="max-width: 40px;" />
+                        <h5 class="mt-3">Drag your files here</h5>
+                        <p class=" mb-3" style="color: rgb(168, 165, 165);">DOC, PDF, XLSX, and PPT, JPG, PNG,
+                            Formats,
+                            up to 50 MB</p>
+                        <button class="btn btn-success px-4 border-0" style="background-color: #10AC84;">Browse
+                            Files</button>
+                    </div>
+
+                    <!-- Uploaded Files List -->
+                    <div class="row g-3">
+                        <div class="col-12 col-md-12">
+                            <div class="upload-box">
+                                <img src="redpdf.png" alt="PDF" />
+                                <div style="font-size: small;">
+                                    <p class="mb-0 fw-semibold" style="color: rgb(168, 165, 165);">Construction
+                                        Confirmation.pdf</p>
+                                    <small style="color: rgb(168, 165, 165);">3.2 MB</small>
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar-fill"></div>
+                                    </div>
+                                </div>
+
+
+                                <div class="icon" style="color: rgb(168, 165, 165);"><i
+                                        class="fas fa-times action-icon"></i><br>
+                                    <p class="d-inline">90%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- This box will be clicable and the page will be connected with this -->
+                        <div class="col-12 col-md-12">
+                            <a href="cost-calculation-btn.html" class="text-decoration-none text-dark">
+                                <div class="upload-box">
+                                    <img src="xls.png" alt="XLSX" />
+                                    <div style="font-size: small;">
+                                        <p class="mb-0 fw-semibold">Cost Calculation.xlsx</p>
+                                        <small style="color: rgb(168, 165, 165);">11 MB</small>
+                                    </div>
+                                    <div class="icon-second"><i class="fas fa-trash action-icon"></i><br></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        const toggleBtn = document.querySelector(".toggle-sidebar-btn");
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector(".sidebar-overlay");
+
+        toggleBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("show");
+            overlay.style.display = sidebar.classList.contains("show") ? "block" : "none";
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.remove("show");
+            overlay.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
